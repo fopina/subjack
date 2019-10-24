@@ -8,7 +8,11 @@ import (
 	"github.com/fopina/subjack/subjack"
 )
 
+var version string = "DEV"
+
 func main() {
+	var showVersion bool
+
 	GOPATH := os.Getenv("GOPATH")
 	Project := "/src/github.com/haccer/subjack/"
 	configFile := "fingerprints.json"
@@ -29,8 +33,14 @@ func main() {
 	flag.BoolVar(&o.NoColor, "no-color", false, "Disable colored output.")
 	flag.BoolVar(&o.IncludeEdge, "e", false, "Include edge takeover cases.")
 	flag.BoolVar(&o.Follow, "follow", false, "Follow redirects.")
+	flag.BoolVar(&showVersion, "version", false, "Show version.")
 
 	flag.Parse()
+
+	if showVersion {
+		fmt.Println("Version: " + version + " (fopina fork)")
+		return
+	}
 
 	flag.Usage = func() {
 		fmt.Printf("Usage of %s:\n", os.Args[0])

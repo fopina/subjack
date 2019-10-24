@@ -1,4 +1,13 @@
+dist: xenial
 language: go
-go: master
-sudo: false
-script: go test ./...
+go: '1.13.x'
+script:
+  - make test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: curl -sL http://git.io/goreleaser | bash
+    on:
+      tags: true
