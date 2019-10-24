@@ -1,5 +1,56 @@
 [
 	{
+		"service": "kinsta",
+		"cname": [
+			"kinsta.com"
+		],
+		"fingerprint": [
+			"No Site For Domain"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "hatenablog",
+		"cname": [
+			"hatenablog.com"
+		],
+		"fingerprint": [
+			"404 Blog is not found"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "fly.io",
+		"cname": [
+			"shw.io"
+		],
+		"fingerprint": [
+			"Not Found"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "cargocollective",
+		"cname": [
+			"subdomain.cargocollective.com"
+		],
+		"fingerprint": [
+			"Connect it by adding it to your Settings."
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "cloudfront",
+		"cname": [
+			".cloudfront.net"
+		],
+		"fingerprint": [
+			"ERROR: The request could not be satisfied"
+		],
+		"nxdomain": false,
+		"edge": true
+	},
+	{
 		"service": "cloudfront",
 		"cname": [
 			".cloudfront.net"
