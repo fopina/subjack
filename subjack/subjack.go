@@ -18,6 +18,7 @@ type Options struct {
 	Manual      bool
 	NoColor     bool
 	IncludeEdge bool
+	Follow      bool
 }
 
 type Subdomain struct {

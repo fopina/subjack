@@ -18,9 +18,9 @@ func main() {
 
 	flag.StringVar(&o.Domain, "d", "", "Domain.")
 	flag.StringVar(&o.Wordlist, "w", "", "Path to wordlist.")
-	flag.IntVar(&o.Threads, "t", 10, "Number of concurrent threads (Default: 10).")
-	flag.IntVar(&o.Timeout, "timeout", 10, "Seconds to wait before connection timeout (Default: 10).")
-	flag.BoolVar(&o.Ssl, "ssl", false, "Force HTTPS connections (May increase accuracy (Default: http://).")
+	flag.IntVar(&o.Threads, "t", 10, "Number of concurrent threads.")
+	flag.IntVar(&o.Timeout, "timeout", 10, "Seconds to wait before connection timeout.")
+	flag.BoolVar(&o.Ssl, "ssl", false, "Force HTTPS connections (May increase accuracy).")
 	flag.BoolVar(&o.All, "a", false, "Find those hidden gems by sending requests to every URL. (Default: Requests are only sent to URLs with identified CNAMEs).")
 	flag.BoolVar(&o.Verbose, "v", false, "Display more information per each request.")
 	flag.StringVar(&o.Output, "o", "", "Output results to file (Subjack will write JSON if file ends with '.json').")
@@ -28,6 +28,7 @@ func main() {
 	flag.BoolVar(&o.Manual, "m", false, "Flag the presence of a dead record, but valid CNAME entry.")
 	flag.BoolVar(&o.NoColor, "no-color", false, "Disable colored output.")
 	flag.BoolVar(&o.IncludeEdge, "e", false, "Include edge takeover cases.")
+	flag.BoolVar(&o.Follow, "follow", false, "Follow redirects.")
 
 	flag.Parse()
 
