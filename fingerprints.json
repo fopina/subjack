@@ -1,5 +1,15 @@
 [
 	{
+		"service": "strikingly",
+		"cname": [
+			"strikinglydns.com"
+		],
+		"fingerprint": [
+			"<h1> PAGE NOT FOUND.</h1>"
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "mashery",
 		"cname": [
 			"mashery.com"
