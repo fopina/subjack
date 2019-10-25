@@ -80,16 +80,6 @@
 		"nxdomain": false
 	},
 	{
-		"service": "fly.io",
-		"cname": [
-			"shw.io"
-		],
-		"fingerprint": [
-			"XNot Found"
-		],
-		"nxdomain": false
-	},
-	{
 		"service": "cargocollective",
 		"cname": [
 			"subdomain.cargocollective.com"
