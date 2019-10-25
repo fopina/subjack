@@ -1,5 +1,65 @@
 [
 	{
+		"service": "squarespace",
+		"cname": [
+			".squarespace.com"
+		],
+		"fingerprint": [
+			"Squarespace - Claim This Domain"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "edgecastcdn",
+		"cname": [
+			".edgecastcdn.net"
+		],
+		"fingerprint": [
+			"<h1>404 - Not Found</h1>"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "uptimerobot",
+		"cname": [
+			"stats.uptimerobot.com"
+		],
+		"fingerprint": [
+			"Redirecting to https://uptimerobot.com/"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "strikingly",
+		"cname": [
+			"strikinglydns.com"
+		],
+		"fingerprint": [
+			"<h1> PAGE NOT FOUND.</h1>"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "mashery",
+		"cname": [
+			"mashery.com"
+		],
+		"fingerprint": [
+			"Unrecognized domain"
+		],
+		"nxdomain": false
+	},
+	{
+		"service": "launchrock",
+		"cname": [
+			"launchrock.com"
+		],
+		"fingerprint": [
+			"It looks like you may have taken a wrong turn somewhere. Don't worry...it happens to all of us."
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "kinsta",
 		"cname": [
 			"kinsta.com"
@@ -16,16 +76,6 @@
 		],
 		"fingerprint": [
 			"404 Blog is not found"
-		],
-		"nxdomain": false
-	},
-	{
-		"service": "fly.io",
-		"cname": [
-			"shw.io"
-		],
-		"fingerprint": [
-			"Not Found"
 		],
 		"nxdomain": false
 	},

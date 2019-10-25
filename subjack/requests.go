@@ -11,8 +11,7 @@ func get(url string, ssl bool, followRedirects bool, timeout int) (body []byte) 
 	client := &fasthttp.Client{TLSConfig: &tls.Config{InsecureSkipVerify: true}}
 
 	if followRedirects {
-		var dst []byte
-		_, body, _ := client.GetTimeout(dst, site(url, ssl), time.Duration(timeout)*time.Second)
+		_, body, _ := client.GetTimeout(nil, site(url, ssl), time.Duration(timeout)*time.Second)
 		return body
 	} else {
 		req := fasthttp.AcquireRequest()

@@ -2,11 +2,14 @@ package subjack
 
 import (
 	"bufio"
+	"crypto/tls"
 	"encoding/json"
 	"io/ioutil"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/valyala/fasthttp"
 )
 
 type Results struct {
@@ -110,9 +113,20 @@ func writeJSON(service, url, output string) {
 }
 
 func fingerprints(file string, includeEdge bool) (data []Fingerprints) {
-	config, err := ioutil.ReadFile(file)
-	if err != nil {
-		log.Fatalln(err)
+	var config []byte
+	var err error
+
+	if strings.HasPrefix(strings.ToLower(file), "http://") || strings.HasPrefix(strings.ToLower(file), "https://") {
+		client := &fasthttp.Client{TLSConfig: &tls.Config{InsecureSkipVerify: true}}
+		_, config, err = client.Get(nil, file)
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		config, err = ioutil.ReadFile(file)
+		if err != nil {
+			log.Fatalln(err)
+		}
 	}
 
 	err = json.Unmarshal(config, &data)
