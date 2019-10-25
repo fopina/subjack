@@ -1,5 +1,15 @@
 [
 	{
+		"service": "squarespace",
+		"cname": [
+			".squarespace.com"
+		],
+		"fingerprint": [
+			"Squarespace - Claim This Domain"
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "edgecastcdn",
 		"cname": [
 			".edgecastcdn.net"
