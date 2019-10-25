@@ -1,5 +1,15 @@
 [
 	{
+		"service": "uptimerobot",
+		"cname": [
+			"stats.uptimerobot.com"
+		],
+		"fingerprint": [
+			"Redirecting to https://uptimerobot.com/"
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "strikingly",
 		"cname": [
 			"strikinglydns.com"
