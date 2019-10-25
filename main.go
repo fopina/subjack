@@ -9,14 +9,10 @@ import (
 )
 
 var version string = "DEV"
+var defaultConfig = "https://raw.githubusercontent.com/fopina/subjack/mymaster/fingerprints.json"
 
 func main() {
 	var showVersion bool
-
-	GOPATH := os.Getenv("GOPATH")
-	Project := "/src/github.com/haccer/subjack/"
-	configFile := "fingerprints.json"
-	defaultConfig := GOPATH + Project + configFile
 
 	o := subjack.Options{}
 
