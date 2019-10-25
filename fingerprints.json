@@ -1,5 +1,15 @@
 [
 	{
+		"service": "edgecastcdn",
+		"cname": [
+			".edgecastcdn.net"
+		],
+		"fingerprint": [
+			"<h1>404 - Not Found</h1>"
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "uptimerobot",
 		"cname": [
 			"stats.uptimerobot.com"
@@ -65,7 +75,7 @@
 			"shw.io"
 		],
 		"fingerprint": [
-			"Not Found"
+			"XNot Found"
 		],
 		"nxdomain": false
 	},
