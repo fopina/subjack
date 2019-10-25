@@ -1,5 +1,15 @@
 [
 	{
+		"service": "mashery",
+		"cname": [
+			"mashery.com"
+		],
+		"fingerprint": [
+			"Unrecognized domain"
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "launchrock",
 		"cname": [
 			"launchrock.com"
