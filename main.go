@@ -21,7 +21,7 @@ func main() {
 	flag.IntVar(&o.Threads, "t", 10, "Number of concurrent threads.")
 	flag.IntVar(&o.Timeout, "timeout", 10, "Seconds to wait before connection timeout.")
 	flag.BoolVar(&o.Ssl, "ssl", false, "Force HTTPS connections (May increase accuracy).")
-	flag.BoolVar(&o.All, "a", false, "Find those hidden gems by sending requests to every URL. (Default: Requests are only sent to URLs with identified CNAMEs).")
+	flag.BoolVar(&o.All, "a", false, "Find those hidden gems by sending requests to every URL. (default: Requests are only sent to URLs with identified CNAMEs)")
 	flag.BoolVar(&o.Verbose, "v", false, "Display more information per each request.")
 	flag.StringVar(&o.Output, "o", "", "Output results to file (Subjack will write JSON if file ends with '.json').")
 	flag.StringVar(&o.Config, "c", defaultConfig, "Path to configuration file.")

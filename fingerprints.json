@@ -1,5 +1,15 @@
 [
 	{
+		"service": "launchrock",
+		"cname": [
+			"launchrock.com"
+		],
+		"fingerprint": [
+			"It looks like you may have taken a wrong turn somewhere. Don't worry...it happens to all of us."
+		],
+		"nxdomain": false
+	},
+	{
 		"service": "kinsta",
 		"cname": [
 			"kinsta.com"
