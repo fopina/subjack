@@ -13,10 +13,10 @@ func (s *Subdomain) dns(o *Options) {
 	config := fingerprints(o.Config, o.IncludeEdge)
 
 	if o.All {
-		detect(s.Url, o.Output, o.NoColor, o.Ssl, o.Follow, o.Verbose, o.Manual, o.Timeout, config)
+		detect(s.Url, o.Output, o.NoColor, o.Ssl, o.Follow, o.Verbose, o.Manual, o.Timeout, o.UserAgent, config)
 	} else {
 		if VerifyCNAME(s.Url, config) {
-			detect(s.Url, o.Output, o.NoColor, o.Ssl, o.Follow, o.Verbose, o.Manual, o.Timeout, config)
+			detect(s.Url, o.Output, o.NoColor, o.Ssl, o.Follow, o.Verbose, o.Manual, o.Timeout, o.UserAgent, config)
 		} else if o.Verbose {
 			result := fmt.Sprintf("[Not Vulnerable] %s\n", s.Url)
 			if o.NoColor {

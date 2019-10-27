@@ -7,8 +7,9 @@ import (
 	"github.com/valyala/fasthttp"
 )
 
-func get(url string, ssl bool, followRedirects bool, timeout int) (body []byte) {
+func get(url string, ssl bool, followRedirects bool, userAgent string, timeout int) (body []byte) {
 	client := &fasthttp.Client{TLSConfig: &tls.Config{InsecureSkipVerify: true}}
+	client.Name = userAgent
 
 	if followRedirects {
 		_, body, _ := client.GetTimeout(nil, site(url, ssl), time.Duration(timeout)*time.Second)

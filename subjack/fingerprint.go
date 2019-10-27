@@ -37,8 +37,8 @@ VERIFY:
 	return match
 }
 
-func detect(url, output string, nocolor, ssl, followRedirects, verbose, manual bool, timeout int, config []Fingerprints) {
-	service := Identify(url, ssl, followRedirects, manual, timeout, config)
+func detect(url, output string, nocolor, ssl, followRedirects, verbose, manual bool, timeout int, userAgent string, config []Fingerprints) {
+	service := Identify(url, ssl, followRedirects, manual, timeout, userAgent, config)
 
 	if service != "" {
 		result := fmt.Sprintf("[%s] %s\n", service, url)
@@ -84,8 +84,8 @@ func detect(url, output string, nocolor, ssl, followRedirects, verbose, manual b
 * is attached to a vulnerable cloud service and able to
 * be taken over.
  */
-func Identify(subdomain string, forceSSL, followRedirects, manual bool, timeout int, fingerprints []Fingerprints) (service string) {
-	body := get(subdomain, forceSSL, followRedirects, timeout)
+func Identify(subdomain string, forceSSL, followRedirects, manual bool, timeout int, userAgent string, fingerprints []Fingerprints) (service string) {
+	body := get(subdomain, forceSSL, followRedirects, userAgent, timeout)
 
 	cname := resolve(subdomain)
 

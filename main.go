@@ -4,15 +4,18 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/fopina/subjack/subjack"
 )
 
 var version string = "DEV"
 var defaultConfig = "https://raw.githubusercontent.com/fopina/subjack/mymaster/fingerprints.json"
+var defaultUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36 Subjack/<VERSION>"
 
 func main() {
 	var showVersion bool
+	var ua string
 
 	o := subjack.Options{}
 
@@ -29,6 +32,7 @@ func main() {
 	flag.BoolVar(&o.NoColor, "no-color", false, "Disable colored output.")
 	flag.BoolVar(&o.IncludeEdge, "e", false, "Include edge takeover cases.")
 	flag.BoolVar(&o.Follow, "follow", false, "Follow redirects.")
+	flag.StringVar(&ua, "ua", defaultUserAgent, "Choose user-agent.")
 	flag.BoolVar(&showVersion, "version", false, "Show version.")
 
 	flag.Parse()
@@ -47,6 +51,8 @@ func main() {
 		flag.Usage()
 		os.Exit(1)
 	}
+
+	o.UserAgent = strings.Replace(ua, "<VERSION>", version, 1)
 
 	subjack.Process(&o)
 }
