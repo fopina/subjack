@@ -222,32 +222,12 @@
 		"nxdomain": false
 	},
 	{
-		"service": "feedpress",
-		"cname": [
-			"redirect.feedpress.me"
-		],
-		"fingerprint": [
-			"The feed has not been found."
-		],
-		"nxdomain": false
-	},
-	{
 		"service": "shopify",
 		"cname": [
 			"myshopify.com"
 		],
 		"fingerprint": [
 			"Sorry, this shop is currently unavailable."
-		],
-		"nxdomain": false
-	},
-	{
-		"service": "statuspage",
-		"cname": [
-			"statuspage.io"
-		],
-		"fingerprint": [
-			"You are being <a href=\"https://www.statuspage.io\">redirected"
 		],
 		"nxdomain": false
 	},
@@ -476,5 +456,15 @@
 		],
 		"fingerprint": [],
 		"nxdomain": true
+	},
+	{
+		"service": "worksites.net",
+		"cname": [
+			""
+		],
+		"fingerprint": [
+			"Hello! Sorry, but the website you&rsquo;re looking for doesn&rsquo;t exist.</p>\n<a href=\"https://worksites.net/\">Learn more about Worksites.net"
+		],
+		"nxdomain": false
 	}
 ]
